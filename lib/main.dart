@@ -1,3 +1,4 @@
+import 'package:car_accessories_ecommerce/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Text("this is color accessories"),
+      onGenerateRoute: AppRouter.generateRoute,
     );
   }
 }
