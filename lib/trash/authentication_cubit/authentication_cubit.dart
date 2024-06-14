@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:car_accessories_ecommerce/consts/constant_texts.dart';
+import 'package:car_accessories_ecommerce/trash/consts/constant_texts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';
 part 'authentication_state.dart';

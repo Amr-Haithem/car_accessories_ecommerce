@@ -3,14 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../2_state_management/authentication_cubit/authentication_cubit.dart';
-import 'widgets/app_text_field_with_label.dart';
-import 'widgets/custom_app_button.dart';
+import '../../authentication_cubit/authentication_cubit.dart';
+import '../widgets/app_text_field_with_label.dart';
+import '../widgets/custom_app_button.dart';
 
 class SignUpScreen extends StatelessWidget {
-  SignUpScreen({super.key, required this.email, required this.name});
-  final String email;
-  final String name;
+  SignUpScreen({
+    super.key,
+  });
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   @override
@@ -88,7 +88,7 @@ class SignUpScreen extends StatelessWidget {
                       onTap: () {
                         BlocProvider.of<AuthenticationCubit>(context)
                             .signUpWithEmailAndPassword(
-                                email: email,
+                                email: emailController.text,
                                 password: passwordController.text);
                       },
                       text: "Sign Up"),

@@ -1,17 +1,17 @@
-import 'package:car_accessories_ecommerce/1_ui/sign_in_screen.dart';
-import 'package:car_accessories_ecommerce/2_state_management/authentication_cubit/authentication_cubit.dart';
+import 'package:car_accessories_ecommerce/trash/1_ui/screens/sign_in_screen.dart';
+import 'package:car_accessories_ecommerce/trash/authentication_cubit/authentication_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '1_ui/auth_wrapper.dart';
-import '1_ui/sign_up_screen.dart';
-   const String authWrapperUrl = "/";
-   const String signInScreenUrl = "signInScreenUrl";
-   const String signUpScreenUrl = "signUpScreenUrl";
+import '1_ui/screens/sign_up_screen.dart';
 
+const String authWrapperUrl = "/";
+const String signInScreenUrl = "signInScreenUrl";
+const String signUpScreenUrl = "signUpScreenUrl";
 
 class AppRouter {
- static Route? generateRoute(RouteSettings routeSettings) {
+  static Route? generateRoute(RouteSettings routeSettings) {
     final AuthenticationCubit _authenticationCubit = AuthenticationCubit();
     switch (routeSettings.name) {
       // case homePageUrl:
@@ -41,7 +41,7 @@ class AppRouter {
                     // BlocProvider(
                     //   create: (context) => BannerAdCubit(),
                     // ),
-                    // BlocProvider.value(value: authenticationCubit)
+                    BlocProvider.value(value: _authenticationCubit)
                   ],
                   child: SignInScreen(),
                 ));
@@ -56,10 +56,7 @@ class AppRouter {
                     // BlocProvider(create: (context) => WriteAppuserCubit())
                   ],
                   //todo
-                  child: SignUpScreen(
-                    name: "Amr",
-                    email: "a@a.com",
-                  ),
+                  child: SignUpScreen(),
                 ));
     }
     return null;

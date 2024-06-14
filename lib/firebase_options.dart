@@ -44,12 +44,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC97tqr_jJFy2Jgt2GCeN-R5IHa3AqK_LI',
-    appId: '1:821863625073:web:75f93ad3b3f93dfc83c6d0',
-    messagingSenderId: '821863625073',
-    projectId: 'grad-project-ecommerce',
-    authDomain: 'grad-project-ecommerce.firebaseapp.com',
-    storageBucket: 'grad-project-ecommerce.appspot.com',
+    apiKey: 'AIzaSyA9Esb7HjzVelPsKFKLWt1-wy0409CB9GU',
+    appId: '1:563308337115:web:845e2d38a67a3603d2b9fe',
+    messagingSenderId: '563308337115',
+    projectId: 'brainloom',
+    authDomain: 'brainloom.firebaseapp.com',
+    databaseURL: 'https://brainloom-default-rtdb.firebaseio.com',
+    storageBucket: 'brainloom.appspot.com',
+    measurementId: 'G-1M0KP0FMMY',
   );
 
   static const FirebaseOptions android = FirebaseOptions(

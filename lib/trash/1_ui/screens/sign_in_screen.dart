@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nb_utils/nb_utils.dart';
-import '../../../../app_router.dart';
-import '../2_state_management/authentication_cubit/authentication_cubit.dart';
-import 'widgets/app_text_field_with_label.dart';
-import 'widgets/custom_app_button.dart';
+import '../../app_router.dart';
+import '../../authentication_cubit/authentication_cubit.dart';
+import '../widgets/app_text_field_with_label.dart';
+import '../widgets/custom_app_button.dart';
 
 class SignInScreen extends StatelessWidget {
   SignInScreen({super.key});
